@@ -1,0 +1,101 @@
+ID,Asset,Log
+1,Windows Server,"<Event xmlns=""http://schemas.microsoft.com/win/2004/08/events/event""><System><EventID>4625</EventID><TimeCreated SystemTime=""12:00:00Z""/></System><EventData><Data Name=""TargetUserName"">usr000</Data><Data Name=""FailureReason"">Unknown user name or bad password</Data><Data Name=""IpAddress"">203.0.113.0</Data></EventData></Event>"
+2,Ubuntu SSH,May 09 12:04:00 ubuntu sshd[7672]: Failed password for usr001 from 203.0.113.11 port 48734 ssh2
+3,macOS,2025-05-09 loginwindow[7211]: User login FAILED for user usr002 (UID 586)
+4,Cisco ASA,"May 09 2025 12:12:00: %ASA-4-113015: AAA user authentication Rejected : user = usr003 , IP = 203.0.113.33"
+5,Palo Alto GlobalProtect,"2025/05/09 12:16:00,001801000013,SYSTEM,gplogin,0,2025/05/09 12:16:00,203.0.113.44,10.0.0.1,Login,globalprotect,user=usr004,tunnel=yes,result=failure"
+6,AWS CloudTrail,"{""eventTime"": ""2025-05-09T12:20:00Z"", ""eventName"": ""ConsoleLogin"", ""userIdentity"": {""type"": ""IAMUser"", ""userName"": ""usr005""}, ""sourceIPAddress"": ""203.0.113.55"", ""errorMessage"": ""Failed authentication"", ""responseElements"": {""ConsoleLogin"": ""Failure""}}"
+7,Azure AD,"{""TimeGenerated"": ""2025-05-09T12:24:00Z"", ""UserPrincipalName"": ""usr006@example.com"", ""AppDisplayName"": ""Azure Portal"", ""Status"": {""value"": ""50074"", ""additionalDetails"": ""User account password was incorrect.""}, ""IPAddress"": ""203.0.113.66""}"
+8,Google Workspace,timestamp=2025-05-09T12:28:00Z event=login login_type=authorized principal=usr007@example.com ip_address=203.0.113.77 outcome=FAILURE
+9,Okta,"{""published"": ""2025-05-09T12:32:00Z"", ""eventType"": ""user.session.start"", ""outcome"": {""result"": ""FAILURE""}, ""actor"": {""displayName"": ""usr008""}, ""client"": {""ipAddress"": ""203.0.113.88""}}"
+10,Salesforce,"""2025-05-09T12:36:00"",""usr009@example.com"",""Login"",""login.salesforce.com"",""Failed"",""203.0.113.99"",""OAuth"""
+11,Office 365,"{""CreationTime"": ""2025-05-09T12:40:00"", ""Operation"": ""UserLoginFailed"", ""UserId"": ""usr010@example.com"", ""ClientIP"": ""203.0.113.110"", ""ResultStatus"": ""Failed""}"
+12,PostgreSQL,"2025-05-09T12:44:00 UTC [8688]: [usr011]@hrdb FATAL:  password authentication failed for user ""usr011"""
+13,MySQL,2025-05-09T12:48:00Z  124 Connect Access denied for user 'usr012'@'203.0.113.132' (using password: YES)
+14,Apache HTTPD,"203.0.113.143 - usr013 [09/May/2025:12:52:00 +0000] ""POST /login HTTP/1.1"" 401 518 ""-"" ""Mozilla/5.0"""
+15,SAP NetWeaver,9.May.2025 12:56:00 SAPR3 DEV100 0 USER_LOGON      usr014 203.0.113.154 FAILURE
+16,Oracle Listener,9-MAY-2025 13:00:00 * (CONNECT_DATA=(SERVICE_NAME=prod)) (ADDRESS=(PROTOCOL=tcp)(HOST=203.0.113.165)(PORT=59546)) * establish * usr015 * rejected
+17,Fortinet FortiGate,date=2025-05-09 time=13:04:00 device_id=FGT001 log_id=0100020001 type=event subtype=system level=error vd=root user=usr016 ui=ssh action=login status=failure srcip=203.0.113.176
+18,Juniper SRX,2025-05-09 13:08:00 srx01 sshd[3973]: Failed password for usr017 from 203.0.113.187 port 42706 ssh2
+19,F5 BIG-IP,"May 10 2025 13:12:00 bigip err tmm[5290]: 01490100:3: AUDIT - user usr018 (partition[Common]) from 203.0.113.198, Unsuccessful login."
+20,GitHub,"{""@timestamp"": ""2025-05-09T13:16:00Z"", ""action"": ""user.login"", ""actor"": ""usr019"", ""result"": ""failure"", ""ip"": ""203.0.113.209""}"
+21,Windows Server,"<Event xmlns=""http://schemas.microsoft.com/win/2004/08/events/event""><System><EventID>4625</EventID><TimeCreated SystemTime=""13:20:00Z""/></System><EventData><Data Name=""TargetUserName"">usr020</Data><Data Name=""FailureReason"">Unknown user name or bad password</Data><Data Name=""IpAddress"">203.0.113.220</Data></EventData></Event>"
+22,Ubuntu SSH,May 09 13:24:00 ubuntu sshd[1267]: Failed password for usr021 from 203.0.113.231 port 46195 ssh2
+23,macOS,2025-05-09 loginwindow[6955]: User login FAILED for user usr022 (UID 559)
+24,Cisco ASA,"May 09 2025 13:32:00: %ASA-4-113015: AAA user authentication Rejected : user = usr023 , IP = 203.0.113.253"
+25,Palo Alto GlobalProtect,"2025/05/09 13:36:00,001801000013,SYSTEM,gplogin,0,2025/05/09 13:36:00,203.0.113.9,10.0.0.1,Login,globalprotect,user=usr024,tunnel=yes,result=failure"
+26,AWS CloudTrail,"{""eventTime"": ""2025-05-09T13:40:00Z"", ""eventName"": ""ConsoleLogin"", ""userIdentity"": {""type"": ""IAMUser"", ""userName"": ""usr025""}, ""sourceIPAddress"": ""203.0.113.20"", ""errorMessage"": ""Failed authentication"", ""responseElements"": {""ConsoleLogin"": ""Failure""}}"
+27,Azure AD,"{""TimeGenerated"": ""2025-05-09T13:44:00Z"", ""UserPrincipalName"": ""usr026@example.com"", ""AppDisplayName"": ""Azure Portal"", ""Status"": {""value"": ""50074"", ""additionalDetails"": ""User account password was incorrect.""}, ""IPAddress"": ""203.0.113.31""}"
+28,Google Workspace,timestamp=2025-05-09T13:48:00Z event=login login_type=authorized principal=usr027@example.com ip_address=203.0.113.42 outcome=FAILURE
+29,Okta,"{""published"": ""2025-05-09T13:52:00Z"", ""eventType"": ""user.session.start"", ""outcome"": {""result"": ""FAILURE""}, ""actor"": {""displayName"": ""usr028""}, ""client"": {""ipAddress"": ""203.0.113.53""}}"
+30,Salesforce,"""2025-05-09T13:56:00"",""usr029@example.com"",""Login"",""login.salesforce.com"",""Failed"",""203.0.113.64"",""OAuth"""
+31,Office 365,"{""CreationTime"": ""2025-05-09T14:00:00"", ""Operation"": ""UserLoginFailed"", ""UserId"": ""usr030@example.com"", ""ClientIP"": ""203.0.113.75"", ""ResultStatus"": ""Failed""}"
+32,PostgreSQL,"2025-05-09T14:04:00 UTC [2025]: [usr031]@hrdb FATAL:  password authentication failed for user ""usr031"""
+33,MySQL,2025-05-09T14:08:00Z  111 Connect Access denied for user 'usr032'@'203.0.113.97' (using password: YES)
+34,Apache HTTPD,"203.0.113.108 - usr033 [09/May/2025:14:12:00 +0000] ""POST /login HTTP/1.1"" 401 518 ""-"" ""Mozilla/5.0"""
+35,SAP NetWeaver,9.May.2025 14:16:00 SAPR3 DEV100 0 USER_LOGON      usr034 203.0.113.119 FAILURE
+36,Oracle Listener,9-MAY-2025 14:20:00 * (CONNECT_DATA=(SERVICE_NAME=prod)) (ADDRESS=(PROTOCOL=tcp)(HOST=203.0.113.130)(PORT=41082)) * establish * usr035 * rejected
+37,Fortinet FortiGate,date=2025-05-09 time=14:24:00 device_id=FGT001 log_id=0100020001 type=event subtype=system level=error vd=root user=usr036 ui=ssh action=login status=failure srcip=203.0.113.141
+38,Juniper SRX,2025-05-09 14:28:00 srx01 sshd[3684]: Failed password for usr037 from 203.0.113.152 port 53731 ssh2
+39,F5 BIG-IP,"May 10 2025 14:32:00 bigip err tmm[3359]: 01490100:3: AUDIT - user usr038 (partition[Common]) from 203.0.113.163, Unsuccessful login."
+40,GitHub,"{""@timestamp"": ""2025-05-09T14:36:00Z"", ""action"": ""user.login"", ""actor"": ""usr039"", ""result"": ""failure"", ""ip"": ""203.0.113.174""}"
+41,Windows Server,"<Event xmlns=""http://schemas.microsoft.com/win/2004/08/events/event""><System><EventID>4625</EventID><TimeCreated SystemTime=""14:40:00Z""/></System><EventData><Data Name=""TargetUserName"">usr040</Data><Data Name=""FailureReason"">Unknown user name or bad password</Data><Data Name=""IpAddress"">203.0.113.185</Data></EventData></Event>"
+42,Ubuntu SSH,May 09 14:44:00 ubuntu sshd[5770]: Failed password for usr041 from 203.0.113.196 port 52755 ssh2
+43,macOS,2025-05-09 loginwindow[9764]: User login FAILED for user usr042 (UID 531)
+44,Cisco ASA,"May 09 2025 14:52:00: %ASA-4-113015: AAA user authentication Rejected : user = usr043 , IP = 203.0.113.218"
+45,Palo Alto GlobalProtect,"2025/05/09 14:56:00,001801000013,SYSTEM,gplogin,0,2025/05/09 14:56:00,203.0.113.229,10.0.0.1,Login,globalprotect,user=usr044,tunnel=yes,result=failure"
+46,AWS CloudTrail,"{""eventTime"": ""2025-05-09T15:00:00Z"", ""eventName"": ""ConsoleLogin"", ""userIdentity"": {""type"": ""IAMUser"", ""userName"": ""usr045""}, ""sourceIPAddress"": ""203.0.113.240"", ""errorMessage"": ""Failed authentication"", ""responseElements"": {""ConsoleLogin"": ""Failure""}}"
+47,Azure AD,"{""TimeGenerated"": ""2025-05-09T15:04:00Z"", ""UserPrincipalName"": ""usr046@example.com"", ""AppDisplayName"": ""Azure Portal"", ""Status"": {""value"": ""50074"", ""additionalDetails"": ""User account password was incorrect.""}, ""IPAddress"": ""203.0.113.251""}"
+48,Google Workspace,timestamp=2025-05-09T15:08:00Z event=login login_type=authorized principal=usr047@example.com ip_address=203.0.113.7 outcome=FAILURE
+49,Okta,"{""published"": ""2025-05-09T15:12:00Z"", ""eventType"": ""user.session.start"", ""outcome"": {""result"": ""FAILURE""}, ""actor"": {""displayName"": ""usr048""}, ""client"": {""ipAddress"": ""203.0.113.18""}}"
+50,Salesforce,"""2025-05-09T15:16:00"",""usr049@example.com"",""Login"",""login.salesforce.com"",""Failed"",""203.0.113.29"",""OAuth"""
+51,Office 365,"{""CreationTime"": ""2025-05-09T15:20:00"", ""Operation"": ""UserLoginFailed"", ""UserId"": ""usr050@example.com"", ""ClientIP"": ""203.0.113.40"", ""ResultStatus"": ""Failed""}"
+52,PostgreSQL,"2025-05-09T15:24:00 UTC [2521]: [usr051]@hrdb FATAL:  password authentication failed for user ""usr051"""
+53,MySQL,2025-05-09T15:28:00Z  68 Connect Access denied for user 'usr052'@'203.0.113.62' (using password: YES)
+54,Apache HTTPD,"203.0.113.73 - usr053 [09/May/2025:15:32:00 +0000] ""POST /login HTTP/1.1"" 401 518 ""-"" ""Mozilla/5.0"""
+55,SAP NetWeaver,9.May.2025 15:36:00 SAPR3 DEV100 0 USER_LOGON      usr054 203.0.113.84 FAILURE
+56,Oracle Listener,9-MAY-2025 15:40:00 * (CONNECT_DATA=(SERVICE_NAME=prod)) (ADDRESS=(PROTOCOL=tcp)(HOST=203.0.113.95)(PORT=48790)) * establish * usr055 * rejected
+57,Fortinet FortiGate,date=2025-05-09 time=15:44:00 device_id=FGT001 log_id=0100020001 type=event subtype=system level=error vd=root user=usr056 ui=ssh action=login status=failure srcip=203.0.113.106
+58,Juniper SRX,2025-05-09 15:48:00 srx01 sshd[6589]: Failed password for usr057 from 203.0.113.117 port 58170 ssh2
+59,F5 BIG-IP,"May 10 2025 15:52:00 bigip err tmm[9752]: 01490100:3: AUDIT - user usr058 (partition[Common]) from 203.0.113.128, Unsuccessful login."
+60,GitHub,"{""@timestamp"": ""2025-05-09T15:56:00Z"", ""action"": ""user.login"", ""actor"": ""usr059"", ""result"": ""failure"", ""ip"": ""203.0.113.139""}"
+61,Windows Server,"<Event xmlns=""http://schemas.microsoft.com/win/2004/08/events/event""><System><EventID>4625</EventID><TimeCreated SystemTime=""16:00:00Z""/></System><EventData><Data Name=""TargetUserName"">usr060</Data><Data Name=""FailureReason"">Unknown user name or bad password</Data><Data Name=""IpAddress"">203.0.113.150</Data></EventData></Event>"
+62,Ubuntu SSH,May 09 16:04:00 ubuntu sshd[9212]: Failed password for usr061 from 203.0.113.161 port 44132 ssh2
+63,macOS,2025-05-09 loginwindow[1097]: User login FAILED for user usr062 (UID 627)
+64,Cisco ASA,"May 09 2025 16:12:00: %ASA-4-113015: AAA user authentication Rejected : user = usr063 , IP = 203.0.113.183"
+65,Palo Alto GlobalProtect,"2025/05/09 16:16:00,001801000013,SYSTEM,gplogin,0,2025/05/09 16:16:00,203.0.113.194,10.0.0.1,Login,globalprotect,user=usr064,tunnel=yes,result=failure"
+66,AWS CloudTrail,"{""eventTime"": ""2025-05-09T16:20:00Z"", ""eventName"": ""ConsoleLogin"", ""userIdentity"": {""type"": ""IAMUser"", ""userName"": ""usr065""}, ""sourceIPAddress"": ""203.0.113.205"", ""errorMessage"": ""Failed authentication"", ""responseElements"": {""ConsoleLogin"": ""Failure""}}"
+67,Azure AD,"{""TimeGenerated"": ""2025-05-09T16:24:00Z"", ""UserPrincipalName"": ""usr066@example.com"", ""AppDisplayName"": ""Azure Portal"", ""Status"": {""value"": ""50074"", ""additionalDetails"": ""User account password was incorrect.""}, ""IPAddress"": ""203.0.113.216""}"
+68,Google Workspace,timestamp=2025-05-09T16:28:00Z event=login login_type=authorized principal=usr067@example.com ip_address=203.0.113.227 outcome=FAILURE
+69,Okta,"{""published"": ""2025-05-09T16:32:00Z"", ""eventType"": ""user.session.start"", ""outcome"": {""result"": ""FAILURE""}, ""actor"": {""displayName"": ""usr068""}, ""client"": {""ipAddress"": ""203.0.113.238""}}"
+70,Salesforce,"""2025-05-09T16:36:00"",""usr069@example.com"",""Login"",""login.salesforce.com"",""Failed"",""203.0.113.249"",""OAuth"""
+71,Office 365,"{""CreationTime"": ""2025-05-09T16:40:00"", ""Operation"": ""UserLoginFailed"", ""UserId"": ""usr070@example.com"", ""ClientIP"": ""203.0.113.5"", ""ResultStatus"": ""Failed""}"
+72,PostgreSQL,"2025-05-09T16:44:00 UTC [6279]: [usr071]@hrdb FATAL:  password authentication failed for user ""usr071"""
+73,MySQL,2025-05-09T16:48:00Z  28 Connect Access denied for user 'usr072'@'203.0.113.27' (using password: YES)
+74,Apache HTTPD,"203.0.113.38 - usr073 [09/May/2025:16:52:00 +0000] ""POST /login HTTP/1.1"" 401 518 ""-"" ""Mozilla/5.0"""
+75,SAP NetWeaver,9.May.2025 16:56:00 SAPR3 DEV100 0 USER_LOGON      usr074 203.0.113.49 FAILURE
+76,Oracle Listener,9-MAY-2025 17:00:00 * (CONNECT_DATA=(SERVICE_NAME=prod)) (ADDRESS=(PROTOCOL=tcp)(HOST=203.0.113.60)(PORT=48140)) * establish * usr075 * rejected
+77,Fortinet FortiGate,date=2025-05-09 time=17:04:00 device_id=FGT001 log_id=0100020001 type=event subtype=system level=error vd=root user=usr076 ui=ssh action=login status=failure srcip=203.0.113.71
+78,Juniper SRX,2025-05-09 17:08:00 srx01 sshd[1799]: Failed password for usr077 from 203.0.113.82 port 45970 ssh2
+79,F5 BIG-IP,"May 10 2025 17:12:00 bigip err tmm[8014]: 01490100:3: AUDIT - user usr078 (partition[Common]) from 203.0.113.93, Unsuccessful login."
+80,GitHub,"{""@timestamp"": ""2025-05-09T17:16:00Z"", ""action"": ""user.login"", ""actor"": ""usr079"", ""result"": ""failure"", ""ip"": ""203.0.113.104""}"
+81,Windows Server,"<Event xmlns=""http://schemas.microsoft.com/win/2004/08/events/event""><System><EventID>4625</EventID><TimeCreated SystemTime=""17:20:00Z""/></System><EventData><Data Name=""TargetUserName"">usr080</Data><Data Name=""FailureReason"">Unknown user name or bad password</Data><Data Name=""IpAddress"">203.0.113.115</Data></EventData></Event>"
+82,Ubuntu SSH,May 09 17:24:00 ubuntu sshd[4618]: Failed password for usr081 from 203.0.113.126 port 59585 ssh2
+83,macOS,2025-05-09 loginwindow[9259]: User login FAILED for user usr082 (UID 574)
+84,Cisco ASA,"May 09 2025 17:32:00: %ASA-4-113015: AAA user authentication Rejected : user = usr083 , IP = 203.0.113.148"
+85,Palo Alto GlobalProtect,"2025/05/09 17:36:00,001801000013,SYSTEM,gplogin,0,2025/05/09 17:36:00,203.0.113.159,10.0.0.1,Login,globalprotect,user=usr084,tunnel=yes,result=failure"
+86,AWS CloudTrail,"{""eventTime"": ""2025-05-09T17:40:00Z"", ""eventName"": ""ConsoleLogin"", ""userIdentity"": {""type"": ""IAMUser"", ""userName"": ""usr085""}, ""sourceIPAddress"": ""203.0.113.170"", ""errorMessage"": ""Failed authentication"", ""responseElements"": {""ConsoleLogin"": ""Failure""}}"
+87,Azure AD,"{""TimeGenerated"": ""2025-05-09T17:44:00Z"", ""UserPrincipalName"": ""usr086@example.com"", ""AppDisplayName"": ""Azure Portal"", ""Status"": {""value"": ""50074"", ""additionalDetails"": ""User account password was incorrect.""}, ""IPAddress"": ""203.0.113.181""}"
+88,Google Workspace,timestamp=2025-05-09T17:48:00Z event=login login_type=authorized principal=usr087@example.com ip_address=203.0.113.192 outcome=FAILURE
+89,Okta,"{""published"": ""2025-05-09T17:52:00Z"", ""eventType"": ""user.session.start"", ""outcome"": {""result"": ""FAILURE""}, ""actor"": {""displayName"": ""usr088""}, ""client"": {""ipAddress"": ""203.0.113.203""}}"
+90,Salesforce,"""2025-05-09T17:56:00"",""usr089@example.com"",""Login"",""login.salesforce.com"",""Failed"",""203.0.113.214"",""OAuth"""
+91,Office 365,"{""CreationTime"": ""2025-05-09T18:00:00"", ""Operation"": ""UserLoginFailed"", ""UserId"": ""usr090@example.com"", ""ClientIP"": ""203.0.113.225"", ""ResultStatus"": ""Failed""}"
+92,PostgreSQL,"2025-05-09T18:04:00 UTC [2509]: [usr091]@hrdb FATAL:  password authentication failed for user ""usr091"""
+93,MySQL,2025-05-09T18:08:00Z  72 Connect Access denied for user 'usr092'@'203.0.113.247' (using password: YES)
+94,Apache HTTPD,"203.0.113.3 - usr093 [09/May/2025:18:12:00 +0000] ""POST /login HTTP/1.1"" 401 518 ""-"" ""Mozilla/5.0"""
+95,SAP NetWeaver,9.May.2025 18:16:00 SAPR3 DEV100 0 USER_LOGON      usr094 203.0.113.14 FAILURE
+96,Oracle Listener,9-MAY-2025 18:20:00 * (CONNECT_DATA=(SERVICE_NAME=prod)) (ADDRESS=(PROTOCOL=tcp)(HOST=203.0.113.25)(PORT=54287)) * establish * usr095 * rejected
+97,Fortinet FortiGate,date=2025-05-09 time=18:24:00 device_id=FGT001 log_id=0100020001 type=event subtype=system level=error vd=root user=usr096 ui=ssh action=login status=failure srcip=203.0.113.36
+98,Juniper SRX,2025-05-09 18:28:00 srx01 sshd[4467]: Failed password for usr097 from 203.0.113.47 port 47907 ssh2
+99,F5 BIG-IP,"May 10 2025 18:32:00 bigip err tmm[4410]: 01490100:3: AUDIT - user usr098 (partition[Common]) from 203.0.113.58, Unsuccessful login."
+100,GitHub,"{""@timestamp"": ""2025-05-09T18:36:00Z"", ""action"": ""user.login"", ""actor"": ""usr099"", ""result"": ""failure"", ""ip"": ""203.0.113.69""}"
