@@ -1,19 +1,28 @@
-# 🎈 Blank app template
+# 🔐 Failed Login Detector
 
-A simple Streamlit app template for you to modify!
+A Streamlit application that uses semantic similarity to identify potential failed login events in log files using Sentence-BERT embeddings.
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
+![Demo](assets/demo.gif)
 
-### How to run it on your own machine
+## 🌟 Features
 
-1. Install the requirements
+- **Semantic Analysis**: Uses Sentence-BERT (all-MiniLM-L6-v2) model for semantic similarity
+- **Text Normalization**: Automatically removes timestamps, IP addresses, and numbers
+- **Interactive UI**: User-friendly interface with real-time analysis
+- **Configurable Thresholds**: Adjust confidence levels for detection
+- **Visual Analytics**: Distribution plots and threshold analysis
+- **Export Options**: Download full results or high-confidence matches only
 
-   ```
-   $ pip install -r requirements.txt
-   ```
+## 🚀 Getting Started
 
-2. Run the app
+### Prerequisites
 
-   ```
-   $ streamlit run streamlit_app.py
-   ```
+- Python 3.8 or higher
+- pip
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/failed-login-detector.git
+cd failed-login-detector
