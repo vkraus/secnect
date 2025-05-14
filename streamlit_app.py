@@ -10,10 +10,41 @@ import io
 
 # Set page config
 st.set_page_config(
-    page_title="Failed Login Detector",
+    page_title="Secnect - Failed Login Detector",
     page_icon="🔐",
     layout="wide"
 )
+
+# Simple CSS for the company name and beta tag
+st.markdown("""
+<style>
+    .company-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .company-name {
+        font-size: 24px;
+        font-weight: bold;
+        color: #1E3A8A;
+        margin-right: 10px;
+    }
+    .beta-tag {
+        background-color: #EF4444;
+        color: white;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 3px 8px;
+        border-radius: 4px;
+        text-transform: uppercase;
+    }
+</style>
+
+<div class="company-header">
+    <div class="company-name">Secnect</div>
+    <div class="beta-tag">Beta</div>
+</div>
+""", unsafe_allow_html=True)
 
 # Cache the model loading
 @st.cache_resource
