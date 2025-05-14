@@ -99,6 +99,8 @@ def main():
     st.markdown("""
     This app uses semantic similarity to identify potential failed login events in log files.
     Upload your log file and we'll rank each line by its similarity to known failed login patterns.
+    
+    For testing purposes, sample log files can be found in the [LogHub repository](https://github.com/logpai/loghub) on GitHub, which contains a collection of system logs from various projects.
     """)
     
     # Load positive examples
