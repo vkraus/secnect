@@ -207,9 +207,11 @@ def main():
                     with col1:
                         st.metric("Total Log Lines", len(results_df))
                     with col2:
-                        st.metric("High Confidence", len(results_df[results_df['max_similarity_score'] >= confidence_threshold]))
+                        high_confidence_count = len(results_df[results_df['max_similarity_score'] >= confidence_threshold])
+                        st.metric("High Confidence", high_confidence_count)
                     with col3:
-                        st.metric("Mean Similarity", f"{results_df['max_similarity_score'].mean():.3f}")
+                        low_confidence_count = len(results_df) - high_confidence_count
+                        st.metric("Low Confidence", low_confidence_count)
                     with col4:
                         st.metric("Max Similarity", f"{results_df['max_similarity_score'].max():.3f}")
                     
@@ -232,6 +234,68 @@ def main():
                                     st.write("**Most similar to:**")
                                     st.text(row['most_similar_positive_example'])
                             st.divider()
+                    
+                    st.subheader("📋 All Results")
+                    st.write(f"Complete analysis of all {len(results_df)} log lines with similarity scores:")
+                    
+                    display_option = st.radio(
+                        "Display format:",
+                        ["Table view", "Detailed view"],
+                        horizontal=True
+                    )
+                    
+                    if display_option == "Table view":
+                        display_df = results_df.copy()
+                        display_df['Status'] = display_df['max_similarity_score'].apply(
+                            lambda x: '🔴 High Confidence' if x >= confidence_threshold else '🟡 Low Confidence'
+                        )
+                        display_df['Similarity Score'] = display_df['max_similarity_score'].apply(lambda x: f"{x:.4f}")
+                        
+                        st.dataframe(
+                            display_df[['original_log_line', 'Similarity Score', 'Status']].rename(columns={
+                                'original_log_line': 'Log Line',
+                                'Similarity Score': 'Score'
+                            }),
+                            use_container_width=True,
+                            height=400
+                        )
+                    else:
+                        st.write("Showing all results (this may take time for large files):")
+                        
+                        page_size = 50
+                        total_pages = (len(results_df) + page_size - 1) // page_size
+                        
+                        if total_pages > 1:
+                            page = st.selectbox(
+                                f"Page (showing {page_size} results per page):",
+                                range(1, total_pages + 1),
+                                format_func=lambda x: f"Page {x} of {total_pages}"
+                            )
+                            start_idx = (page - 1) * page_size
+                            end_idx = min(start_idx + page_size, len(results_df))
+                            page_results = results_df.iloc[start_idx:end_idx]
+                        else:
+                            page_results = results_df
+                        
+                        for idx, row in page_results.iterrows():
+                            score = row['max_similarity_score']
+                            color = "red" if score >= confidence_threshold else "gray"
+                            status = "🔴 High Confidence" if score >= confidence_threshold else "🟡 Low Confidence"
+                            
+                            with st.container():
+                                col1, col2, col3 = st.columns([1, 1, 4])
+                                with col1:
+                                    st.markdown(f"**Score:** :{color}[{score:.4f}]")
+                                with col2:
+                                    st.markdown(f"**{status}**")
+                                with col3:
+                                    st.text(row['original_log_line'])
+                                    with st.expander("Details"):
+                                        st.write("**Normalized version:**")
+                                        st.text(row['normalized_log_line'])
+                                        st.write("**Most similar to:**")
+                                        st.text(row['most_similar_positive_example'])
+                                st.divider()
                     
                     # Visualization
                     st.subheader("📈 Similarity Score Distribution")
